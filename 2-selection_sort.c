@@ -18,8 +18,8 @@ void selection_sort(int *array, size_t size)
         temp_num = array[out_index];
         array[out_index] = array[entry_index];
         array[entry_index] = temp_num;
-        print_array(array, size);
       }
     }
+    print_array(array, size);
   }
 }
