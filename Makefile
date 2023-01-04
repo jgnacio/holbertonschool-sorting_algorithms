@@ -1,6 +1,6 @@
 CC = gcc
-SRC = array_fun.c 2-selection_sort.c
-MAIN = 2-main.c
+SRC = array_fun.c 2-selection_sort.c 3-quick_sort.c
+MAIN = 3-main.c
 DEPS = sort.h
 NAME = executable-sort
 
