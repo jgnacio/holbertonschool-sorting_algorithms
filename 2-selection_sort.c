@@ -8,7 +8,7 @@ void selection_sort(int *array, size_t size)
   if (!array)
     return;
 
-  for (index = 0; array && index < size; index++)
+  for (index = 0; array && index < size - 1; index++)
   {
     entry_index = index;
     for (out_index = index + 1; out_index < size; out_index++)
@@ -18,9 +18,12 @@ void selection_sort(int *array, size_t size)
         entry_index = out_index;
       }
     }
-    temp_num = array[index];
-    array[index] = array[entry_index];
-    array[entry_index] = temp_num;
-    print_array(array, size);
+    if (array[index] > array[entry_index])
+    {
+      temp_num = array[index];
+      array[index] = array[entry_index];
+      array[entry_index] = temp_num;
+      print_array(array, size);
+    }
   }
 }
