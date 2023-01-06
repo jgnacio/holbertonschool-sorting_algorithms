@@ -7,7 +7,7 @@
 
 void bubble_sort(int *array, size_t size)
 {
-	unsigned int j = 0, i = 0, h = 0;
+	unsigned int j = 0, i = 0;
 
 	int save_num = 0;
 
@@ -20,11 +20,7 @@ void bubble_sort(int *array, size_t size)
 				save_num = array[j];
 				array[j] = array[j + 1];
 				array[j + 1] = save_num;
-				for (h = 0; h < size; h++)
-				{
-					printf("%d, ", array[h]);
-				}
-				printf("\n");
+				print_array(array, size);
 			}
 		}
 	}
